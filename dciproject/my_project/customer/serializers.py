@@ -1,10 +1,8 @@
-#new - whole script added by instructor
-from rest_framework import serializers 
-from .models import Customer
+from rest_framework import serializers
+from product.models import Product
 
-class CustomerSerializer(serializers.ModelSerializer):
 
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Customer
-        fields = ['pk', 'name', 'email', 'created']
-
+        model = Product
+        fields = ['product_name', 'product_id', 'product_category', 'product_description', 'product_image_url', 'product_price']
